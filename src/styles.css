@@ -1,0 +1,118 @@
+/* You can add global styles to this file, and also import other style files */
+header {
+  background: #02AAB0;
+  background: -webkit-linear-gradient(left, #00CDAC, #02AAB0);
+  background: -moz-linear-gradient(left, #00CDAC, #02AAB0);
+  background: -o-linear-gradient(left, #00CDAC, #02AAB0);
+  background: linear-gradient(to right, #00CDAC, #02AAB0);
+  padding: 50px 0;
+  margin-bottom: 50px;
+}
+header h1 {
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+}
+header .field {
+  display: flex;
+  flex-flow: column-reverse;
+  margin-bottom: 1em;
+}
+header .modify-content {
+  margin-top: 20px;
+}
+header .modify-content label,
+header .modify-content input {
+  transition: all 0.2s;
+  touch-action: manipulation;
+}
+header .modify-content label {
+  letter-spacing: 0.03em;
+  color: #fff;
+}
+header .modify-content input {
+  text-transform: capitalize;
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  color: #fff;
+  font-size: 1.3em;
+  font-weight: 600;
+  padding-left: 0;
+}
+header .modify-content input:focus {
+  outline: 0;
+  box-shadow: none;
+  color: #333;
+  font-size: 1.1em;
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-weight: 400;
+  padding-left: 12px;
+}
+header .modify-content input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+header .modify-content input:placeholder-shown + label {
+  transform-origin: left bottom;
+  transform: translate(0, 2.125rem) scale(1.2);
+}
+header .modify-content input:input:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+header .modify-content input:not(:placeholder-shown) + label,
+header .modify-content input:focus + label {
+  transform: translate(0, 0) scale(1);
+  cursor: pointer;
+}
+header .modify-content ::-webkit-input-placeholder {
+  opacity: 0;
+  transition: inherit;
+  color: #d2d2d2;
+}
+ul {
+  padding: 0;
+}
+ul li {
+  text-align: center;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+h3 {
+  text-align: center;
+}
+nav {
+  background: #f2f2f2;
+  padding: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+nav .count {
+  text-align: right;
+}
+nav .count span {
+  color: #007bff;
+  font-weight: 800;
+  margin-left: 5px;
+}
+.data-table h3 {
+  text-align: left;
+  margin: 30px 0;
+}
+.addUser button {
+  width: 100%;
+}
+.addUser .col-md-2 {
+  padding-right: 0;
+}
+.addUser .col-md-2:last-child {
+  padding-right: 15px;
+}
+input:focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+input::placeholder {
+  color: blue;
+}

@@ -1,0 +1,99 @@
+<header>
+  <h1>
+    Welcome {{name}} to {{ title }}!
+  </h1>
+  <div class="modify-content col-md-6 offset-md-3">
+    <div class="form-group field">
+      <input id="newName" type="text" class="form-control" autocomplete="off" placeholder="Ingrese nombre" [(ngModel)]="name">
+      <label for="newName">Su nombre es</label>
+    </div>
+  </div>
+</header>
+
+
+<main class="container">
+
+  <div class="list">
+    <nav>
+      <div class="div-button col-md-9">
+        <div class="button btn btn-primary" (click)="functionShowHobbies()">
+          {{showHobbies ? 'Hide Hobbies' : 'Show Hobbies' }}</div>
+        <div class="button btn btn-danger" (click)="clearHobbie()">
+          Clear Hobbies</div>
+      </div>
+
+      <div class="count col-md-3">
+
+        Cantidad de hobbies:
+        <span> {{hobbies.length}}</span>
+
+      </div>
+    </nav>
+    <h3>Listado</h3>
+    <div *ngIf="showHobbies" class="list-group col-md-6 offset-md-3">
+      <ul class="">
+        <li *ngFor="let hobbie of hobbies" class="list-group-item list-group-item-action">{{hobbie}}</li>
+      </ul>
+
+      <form (submit)="addHobbie(hobby)">
+        <div class="form-group">
+          <label for="NewHobbie">Nuevo Hobbie</label>
+          <input #hobby type="text" class="form-control" id="NewHobbie" autocomplete="off" placeholder="Ingrese nuevo hobbie">
+          <small id="hobbieHelp" class="form-text text-muted">We'll never share your hobbie with anyone else.</small>
+        </div>
+      </form>
+
+    </div>
+
+  </div>
+
+  <div class="data-table">
+    <h3>Listado de Usuarios</h3>
+    <div class="addUser">
+      <form action="">
+        <div class="form-group row">
+          <div class="col-md-2">
+            <input type="text" class="form-control" autocomplete="off" placeholder="Ingrese nombre" name="nameUser">
+          </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" autocomplete="off" placeholder="Ingrese email" name="emailUser">
+          </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" autocomplete="off" placeholder="Ingrese telefono" name="phoneUser">
+          </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" autocomplete="off" placeholder="Ingrese dirección" name="addressUser">
+          </div>
+          <div class="col-md-2">
+            <input type="text" class="form-control" autocomplete="off" placeholder="Ingrese website" name="websiteUser">
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="btn btn-success" (click)="addUser">Add user</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone</th>
+          <th scope="col">Address</th>
+          <th scope="col">Website</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of posts">
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.email}}</td>
+          <td>{{data.phone}}</td>
+          <td>{{data.address.city}}</td>
+          <td>{{data.website}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</main>

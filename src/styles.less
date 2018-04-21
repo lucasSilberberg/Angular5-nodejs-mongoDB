@@ -1,0 +1,131 @@
+/* You can add global styles to this file, and also import other style files */
+
+header {
+    background: #02AAB0;
+    background: -webkit-linear-gradient(left, #00CDAC, #02AAB0);
+    background: -moz-linear-gradient(left, #00CDAC, #02AAB0);
+    background: -o-linear-gradient(left, #00CDAC, #02AAB0);
+    background: linear-gradient(to right, #00CDAC, #02AAB0);
+    padding: 50px 0;
+    margin-bottom: 50px;
+    h1 {
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+    }
+    .field {
+        display: flex;
+        flex-flow: column-reverse;
+        margin-bottom: 1em;
+    }
+    .modify-content {
+        margin-top: 20px;
+        label,
+        input {
+            transition: all 0.2s;
+            touch-action: manipulation;
+        }
+        label {
+            letter-spacing: 0.03em;
+            color: #fff;
+        }
+        input {
+            text-transform: capitalize;
+            background: none;
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, .7);
+            color: #fff;
+            font-size: 1.3em;
+            font-weight: 600;
+            padding-left: 0;
+            &:focus {
+                outline: 0;
+                box-shadow: none;
+                color: #333;
+                font-size: 1.1em;
+                border: none;
+                border-bottom: 1px solid #fff;
+                font-weight: 400;
+                padding-left: 12px;
+                &::-webkit-input-placeholder {
+                    opacity: 1;
+                }
+            }
+            &:placeholder-shown+label {
+                transform-origin: left bottom;
+                transform: translate(0, 2.125rem) scale(1.2);
+            }
+            &:input:focus::-webkit-input-placeholder {
+                opacity: 1;
+            }
+            &:not(:placeholder-shown)+label,
+            &:focus+label {
+                transform: translate(0, 0) scale(1);
+                cursor: pointer;
+            }
+        }
+        ::-webkit-input-placeholder {
+            opacity: 0;
+            transition: inherit;
+            color: #d2d2d2;
+        }
+    }
+}
+
+ul {
+    padding: 0;
+    li {
+        text-align: center;
+        text-transform: capitalize;
+        cursor: pointer;
+    }
+}
+
+h3 {
+    text-align: center;
+}
+
+nav {
+    background: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    .count{
+        text-align: right;
+        span{
+            color: #007bff;
+            font-weight: 800;
+            margin-left: 5px;
+        }
+    }
+}
+
+.data-table {
+    h3 {
+        text-align: left;
+        margin: 30px 0;
+    }
+}
+
+.addUser {
+    button {
+        width: 100%;
+    }
+    .col-md-2 {
+        padding-right: 0;
+        &:last-child {
+            padding-right: 15px;
+        }
+    }
+}
+
+input {
+    &:focus {
+        outline: 0 !important;
+        box-shadow: none !important;
+    }
+    &::placeholder {
+        color: blue;
+    }
+}
